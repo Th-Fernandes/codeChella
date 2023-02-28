@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import HomePage from "./page";
+import { Header } from ".";
 
 describe('header', () => {
   test('should have a nav element', () => {
-    render(<HomePage />);
+    render(<Header />);
 
     const navByRole = screen.getByRole('navigation');
     const navListByRole = screen.getByRole('list');
