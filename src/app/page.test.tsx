@@ -1,11 +1,14 @@
-import { render, screen } from "@testing-library/react"
-import Home from "./page"
+import { render, screen } from "@testing-library/react";
+import HomePage from "./page";
 
-test('should pass', () => {
-  render(<Home/>)
+describe('header', () => {
+  test('should have a nav element', () => {
+    render(<HomePage />);
 
-  const buttonByRole = screen.getByRole('button')
-  console.log(buttonByRole)
+    const navByRole = screen.getByRole('navigation');
+    const navListByRole = screen.getByRole('list');
 
-  expect(buttonByRole).toBeInTheDocument;
-})
+    expect(navByRole).toBeInTheDocument;
+    expect(navListByRole.children).toHaveLength(4);
+  });
+});
