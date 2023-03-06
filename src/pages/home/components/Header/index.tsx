@@ -2,10 +2,11 @@ import { Button, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 import Logo from "@/assets/img/logo.png";
 import React from "react";
+import { useIsMobileNavOpened } from "./hooks/useIsMobileNavOpened";
 
 export function Header() {
   const [windowWidth, setWindowWidth] = React.useState<number>(0);
-  const [isMobileNavOpened, setIsMobileNavOpened] = React.useState(false);
+  const {isMobileNavOpened, toggleMobileNavState} = useIsMobileNavOpened();
 
   React.useEffect(() => setWindowWidth(window.innerWidth), []);
 
@@ -18,7 +19,7 @@ export function Header() {
       >
         <Image src={Logo} alt="logo" width={234} height={64} />
         {windowWidth < 768 && (
-          <Button onClick={() => setIsMobileNavOpened(actualState => !actualState)}>
+          <Button onClick={toggleMobileNavState}>
             <Image src="/menu.png" alt="navegação" width={32} height={32} />
           </Button>
         )}
