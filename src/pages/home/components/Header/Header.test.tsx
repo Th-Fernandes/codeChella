@@ -1,14 +1,20 @@
 import { render, screen } from "@testing-library/react";
+import React from "react";
 import { Header } from ".";
 
-describe('header', () => {
-  test('should have a nav element', () => {
+describe("header", () => {
+  test("should has a button to show navigation on mobile screens", () => {
+    function mockWindowWidthHook() {
+      const validScreenWidth = 360;
+      const setStateMock = jest.fn();
+      const useStateMock: any = () => [ validScreenWidth , setStateMock];   
+      jest.spyOn(React, 'useState').mockImplementation(useStateMock);
+    }
+
+    mockWindowWidthHook();
     render(<Header />);
 
-    const navByRole = screen.getByRole('navigation');
-    const navListByRole = screen.getByRole('list');
-
-    expect(navByRole).toBeInTheDocument;
-    expect(navListByRole.children).toHaveLength(4);
+    const buttonByRole = screen.getByRole("button");
+    expect(buttonByRole).toBeInTheDocument;
   });
 });
