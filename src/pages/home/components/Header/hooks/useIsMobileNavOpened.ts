@@ -1,6 +1,6 @@
 import React from "react";
 
-export function useIsMobileNavOpened() {
+export default function useIsMobileNavOpened() {
   const [isMobileNavOpened, setIsMobileNavOpened] = React.useState(false);
 
   function toggleMobileNavState() {
