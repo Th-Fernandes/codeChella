@@ -2,12 +2,12 @@ import { Button, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 import Logo from "@/assets/img/logo.png";
 import React from "react";
-import { useIsMobileNavOpened } from "./hooks/useIsMobileNavOpened";
+import  useIsMobileNavOpened  from "./hooks/useIsMobileNavOpened";
 
-export function Header() {
+export default function Header() {
   const [windowWidth, setWindowWidth] = React.useState<number>(0);
-  const {isMobileNavOpened, toggleMobileNavState} = useIsMobileNavOpened();
-
+  const {isMobileNavOpened ,toggleMobileNavState} = useIsMobileNavOpened();
+  
   React.useEffect(() => setWindowWidth(window.innerWidth), []);
 
   return (
