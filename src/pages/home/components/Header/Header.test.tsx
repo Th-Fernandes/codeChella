@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom';
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 import Header from ".";
@@ -60,6 +61,13 @@ describe("header on greater or equal to tablet screens", () => {
     render(<Header />);
 
     const navByRole = screen.getByRole("navigation");
-    expect(navByRole).toBeInTheDocument;
+    expect(navByRole).toBeInTheDocument();
+  });
+
+  test("should not has a button to open mobile nav", () => {
+    render(<Header/>);
+
+    const buttonByRole = screen.queryByRole('button');
+    expect(buttonByRole).not.toBeInTheDocument();
   });
 });
