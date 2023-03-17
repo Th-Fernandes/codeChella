@@ -20,7 +20,7 @@ export default function Header() {
         justifyContent="space-between"
         alignItems="center"
         bgColor="brand.primary.400"
-        padding={["2rem 1.5rem", "2rem 3.75rem", null, "2.75rem 7.5rem"]}
+        padding={{sm: '2rem 1.5rem', md: '2rem 3.75rem', lg: '2.75rem 7.5rem'}}
       >
         <Image src={Logo} alt="logo" width={234} height={64} />
         {windowWidth < 768 ? (
