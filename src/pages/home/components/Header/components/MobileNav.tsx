@@ -7,7 +7,7 @@ interface Props {
 
 export function MobileNav({ isMobileNavOpened }: Props) {
   return (
-    <ScaleFade initialScale={0}   in={isMobileNavOpened}>
+    <ScaleFade initialScale={0.7}   in={isMobileNavOpened}>
       <nav>
         <UnorderedList
           backgroundColor="brand.primary.400"

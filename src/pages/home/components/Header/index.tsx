@@ -24,8 +24,8 @@ export default function Header() {
       >
         <Image src={Logo} alt="logo" width={234} height={64} />
         {windowWidth < 768 ? (
-          <Button onClick={toggleMobileNavState}>
-            <Image src="/menu.png" alt="navegação" width={32} height={32} />
+          <Button onClick={toggleMobileNavState} bg="none" _hover={{ background: 'none'}}>
+            <Image src="/menu.png" alt="navegação" width={32} height={32}/>
           </Button>
         ) : (
           <DesktopNav />
