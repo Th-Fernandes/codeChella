@@ -39,13 +39,13 @@ const  textStyles = {
     lg: {
       fontSize:   '40px',
       fontFamily: `'Raleway', sans-serif`,
-      lineHeight: '83.2px',
+      lineHeight: '46.96px',
       fontWeight:  700,
     },
     xl: {
-      fontSize:   '64px',
+      fontSize:   { base: '32px', md: '64px'},
       fontFamily: `'Calistoga', sans-serif`,
-      lineHeight: '46.96px',
+      lineHeight: {base: '41.6px' , md: '83.2px'},
       fontWeight:  400,
     }
   },
