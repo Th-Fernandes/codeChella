@@ -1,4 +1,4 @@
-import { extendBaseTheme, extendTheme } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
 
 const colors = {
   brand: {
@@ -11,12 +11,19 @@ const colors = {
       300: "#FACF9D",
       400: "#DF9010",
     },
-    breakpoints: {
-      sm: "22,5rem", //360px
-      md: "48rem", //768px
-      lg: "90rem" //1440px
-    },
+
   },
 };
 
-export const theme = extendTheme({ colors });
+const breakpoints = {
+  sm: "22,5rem", //360px
+  md: "48rem", //768px
+  lg: "90rem" //1440px
+};
+
+const fonts = {
+  heading: `'Calistoga', sans-serif`,
+  body: `'Raleway', sans-serif`
+};
+
+export const theme = extendTheme({ colors, breakpoints, fonts });
