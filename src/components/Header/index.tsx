@@ -7,7 +7,7 @@ import { DesktopNav } from "./components/DesktopNav";
 import { MobileNav } from "./components/MobileNav";
 
 
-export default function Header() {
+export function Header() {
   const [windowWidth, setWindowWidth] = React.useState<number>(0);
   const { isMobileNavOpened, toggleMobileNavState } = useIsMobileNavOpened();
 

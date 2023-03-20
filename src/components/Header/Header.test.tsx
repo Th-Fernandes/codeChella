@@ -1,7 +1,6 @@
-import '@testing-library/jest-dom';
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
-import Header from ".";
+import { Header } from ".";
 
 let mockNavState = false;
 let mockToggleNavState = () => mockNavState = !mockNavState;
