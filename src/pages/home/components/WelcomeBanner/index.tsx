@@ -1,3 +1,4 @@
+import { Heading } from "@/components/Heading";
 import { Center } from "@chakra-ui/react";
 import bannerImg from "../../../../assets/img/banner.png";
 import mobileBannerImg from "../../../../assets/img/mobile-banner.png";
@@ -17,7 +18,10 @@ export function WelcomeBanner() {
       bgPosition="center"
       bgRepeat="no-repeat"
     >
-      hello world
+      <Heading as="h1" size="xl" >
+        Boas-vindas ao <br/>
+        #CodeChella2023!
+      </Heading>
     </Center>
   );
 }
