@@ -9,7 +9,7 @@ interface Props extends HTMLAttributes<HTMLOrSVGElement> {
 
 export function Heading({as = 'h2', size = 'md' ,children}: Props) {
   return (
-    <Box as={as} textStyle={size}>
+    <Box as={as} textStyle={`heading.${size}`}>
       {children}
     </Box>
   );
