@@ -52,7 +52,7 @@ const  textStyles = {
   text: {
     fontSize: '20px',
     fontFamily: `'Raleway', sans-serif`,
-    lineHeight: '50px',
+    lineHeight: '40px',
     color: colors.text[400]
   }
 };
