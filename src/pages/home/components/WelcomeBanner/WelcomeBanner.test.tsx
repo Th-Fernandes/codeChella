@@ -1,7 +1,5 @@
-import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { WelcomeBanner } from ".";
-import bannerImg from "@/assets/img/banner.png";
 
 describe('WelcomeBanner component', () => {
   test('should has proper styles for background', () => {
