@@ -26,4 +26,25 @@ const fonts = {
   body: `'Raleway', sans-serif`
 };
 
-export const theme = extendTheme({ colors, breakpoints, fonts });
+const  textStyles = {
+  md: {
+    fontSize:   '32px',
+    fontFamily: `'Raleway', sans-serif`,
+    lineHeight: '37.57px',
+    fontWeight:  700,
+  },
+  lg: {
+    fontSize:   '40px',
+    fontFamily: `'Raleway', sans-serif`,
+    lineHeight: '83.2px',
+    fontWeight:  700,
+  },
+  xl: {
+    fontSize:   '64px',
+    fontFamily: `'Calistoga', sans-serif`,
+    lineHeight: '46.96px',
+    fontWeight:  400,
+  }
+};
+
+export const theme = extendTheme({ colors, breakpoints, fonts,  textStyles });
