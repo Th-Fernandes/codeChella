@@ -1,7 +1,6 @@
-import { Box, TypographyProps } from "@chakra-ui/react";
-import { HTMLAttributes } from "react";
+import { Box, HeadingProps } from "@chakra-ui/react";
 
-interface Props extends TypographyProps {
+interface Props extends HeadingProps {
   as?: 'p' | 'span' | 'a',
   children: string
 }
