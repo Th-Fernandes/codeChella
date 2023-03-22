@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 interface Props extends TypographyProps {
   as?: 'h1'| 'h2' | 'h3' | 'h4' | 'h5' | 'h6',
-  size: 'md' | 'lg'| 'xl'
+  size?: 'md' | 'lg'| 'xl'
   children: ReactNode
 }
 

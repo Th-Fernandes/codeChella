@@ -2,7 +2,7 @@ import { Box, HeadingProps } from "@chakra-ui/react";
 
 interface Props extends HeadingProps {
   as?: 'p' | 'span' | 'a',
-  children: string
+  children: string | string[]
 }
 
 export function Text({as, children, ...rest}: Props) {

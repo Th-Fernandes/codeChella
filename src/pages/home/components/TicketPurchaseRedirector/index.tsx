@@ -16,10 +16,12 @@ export function TicketPurchaseRedirector() {
   return (
     <Container
       as="section"
-      pt="32px"
+      pt={{base: "32px", lg: "64px"}}
       display="flex"
       flexDirection={{ base: "column", lg: "row" }}
-      justifyContent="space-between"
+      justifyContent="center"
+      gap={{lg: "48px"}}
+      alignItems="center"
     >
       <Box
         role="banner"
