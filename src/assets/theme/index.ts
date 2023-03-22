@@ -18,9 +18,10 @@ const colors = {
 };
 
 const breakpoints = {
-  sm: "22,5rem", //360px
-  md: "48rem", //768px
-  lg: "90rem" //1440px
+  sm: "22,5rem", //|360px
+  md: "48rem",   //|768px
+  bg: "64rem",   //|1024px
+  lg: "90rem"    //|1440px
 };
 
 const fonts = {
