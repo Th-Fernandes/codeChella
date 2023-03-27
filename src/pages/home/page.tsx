@@ -1,17 +1,22 @@
-import { Header } from "@/components/Header";
-import { WelcomeBanner } from "./components/WelcomeBanner";
 import { TicketPurchaseRedirector } from "./components/TicketPurchaseRedirector";
 import { LineUp } from "./components/LineUp";
-import { Footer } from "@/components/Footer";
+import { Page } from "@/components/Page";
+import bannerImg from "@/assets/img/banner.png";
+import mobileBannerImg from "@/assets/img/mobile-banner.png";
 
 export default function Home() {
   return (
-    <>
-      <Header />
-      <WelcomeBanner />
-      <TicketPurchaseRedirector /> 
-      <LineUp />
-      <Footer />
-    </>     
+    <Page.Container>
+      <Page.Header />
+      <Page.MainContent>
+        <Page.Banner
+          textContent={["Boas-vindas ao", <br key=""/>, "#CodeChella2023!"]}
+          bgImage={[mobileBannerImg.src, null, bannerImg.src]}
+        />
+        <TicketPurchaseRedirector />
+        <LineUp />
+      </Page.MainContent>
+      <Page.Footer />
+    </Page.Container>
   );
 }
