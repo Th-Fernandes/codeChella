@@ -13,7 +13,7 @@ export function Container({children}:ChildrenCompProps) {
 
 export function MainContent({children}: ChildrenCompProps) {
   return(
-    <main>
+    <main style={{background: 'linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%)'}}>
       {children}
     </main>
   );
