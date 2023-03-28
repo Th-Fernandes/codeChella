@@ -58,4 +58,8 @@ const  textStyles = {
   }
 };
 
-export const theme = extendTheme({ colors, breakpoints, fonts,  textStyles });
+const shadows = {
+  black: '4px 4px 8px 0px #00000026'
+};
+
+export const theme = extendTheme({ colors, breakpoints, fonts,  textStyles, shadows });
