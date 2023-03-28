@@ -1,6 +1,7 @@
 import { Page } from "@/components/Page";
 import bannerImgMobile from "@/assets/img/general-info-banner-mobile.png";
 import bannerImgDesktop from "@/assets/img/general-info-banner-desktop.png";
+import { FaqAccordionSection } from "./components/Accordion";
 
 export default function GeneralInfoPage() {
   return (
@@ -11,6 +12,7 @@ export default function GeneralInfoPage() {
           textContent="A Experiência"
           bgImage={{ base: bannerImgMobile.src, md: bannerImgDesktop.src }}
         />
+        <FaqAccordionSection />
       </Page.MainContent>
       <Page.Footer />
     </Page.Container>
